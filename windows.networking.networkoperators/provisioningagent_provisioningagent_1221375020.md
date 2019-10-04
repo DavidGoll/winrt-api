@@ -14,13 +14,14 @@ public ProvisioningAgent()
 Creates a new instance of a [ProvisioningAgent](provisioningagent.md).
 
 > [!NOTE]
-> This functionality is only available to mobile operator apps and Windows Store apps given privileged access by mobile network operators.
+> This functionality is only available to mobile operator apps and UWP apps given privileged access by mobile network operators.
 
 
 
-> If you want to use this API and publish your app to the Store, you will need special approval. For more information, see the **Special and restricted capabilities** section under [App capability declarations](https://docs.microsoft.com/en-us/windows/uwp/packaging/app-capability-declarations). 
+> If you want to use this API and publish your app to the Store, you will need special approval. For more information, see the **Special and restricted capabilities** section under [App capability declarations](https://docs.microsoft.com/windows/uwp/packaging/app-capability-declarations). 
 
 ## -remarks
+To use this object from a desktop app, create the object, and then use [the IInitializeWithWindow::Initialize method](https://docs.microsoft.com/en-us/windows/desktop/api/shobjidl_core/nf-shobjidl_core-iinitializewithwindow-initialize) to associate the object with a window handle.
 
 ## -examples
 
@@ -28,4 +29,6 @@ Creates a new instance of a [ProvisioningAgent](provisioningagent.md).
 
 
 ## -capabilities
+cellularDeviceIdentity, cellularDeviceControl
+networkConnectionManagerProvisioning
 networkDataPlanProvisioning, networkDataPlanProvisioning

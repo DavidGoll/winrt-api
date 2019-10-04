@@ -10,12 +10,12 @@ public class BackgroundTransferContentPart : Windows.Networking.BackgroundTransf
 # Windows.Networking.BackgroundTransfer.BackgroundTransferContentPart
 
 ## -description
-Represents a content part of a multi-part transfer request. Each [BackgroundTransferContentPart](backgroundtransfercontentpart.md) object can represent either a single string of text content or a single file payload, but not both.
+Represents a content part of a multi-part transfer request. Each BackgroundTransferContentPart object can represent either a single string of text content or a single file payload, but not both.
 
 ## -remarks
 
 ## -examples
-The following example demonstrates how to configure and begin a multi-part upload operation, and is based on the [Background Transfer sample](http://go.microsoft.com/fwlink/p/?linkid=245064) offered in the Windows Sample Gallery.
+The following example demonstrates how to configure and begin a multi-part upload operation, and is based on the [Background Transfer sample](https://go.microsoft.com/fwlink/p/?linkid=245064) offered in the Windows Sample Gallery.
 
 ```javascript
         
@@ -49,7 +49,7 @@ The following example demonstrates how to configure and begin a multi-part uploa
 
 
 ## -see-also
-[CreateDownload(Uri, IStorageFile, IStorageFile)](backgrounddownloader_createdownload_1461958690.md), [CreateUploadAsync](backgrounduploader_createuploadasync.md)
+[CreateDownload(Uri, IStorageFile, IStorageFile)](backgrounddownloader_createdownload_1461958690.md), [CreateUploadAsync](/uwp/api/windows.networking.backgroundtransfer.backgrounduploader.createuploadasync)
 
 ## -capabilities
 internetClient, internetClientServer, privateNetworkClientServer

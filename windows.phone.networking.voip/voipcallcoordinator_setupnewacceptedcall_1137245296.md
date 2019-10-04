@@ -37,5 +37,5 @@ The object that represents the VoIP call.
 
 ## -examples
 
-## capabilities
+## -capabilities
 voipCall

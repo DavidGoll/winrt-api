@@ -10,24 +10,35 @@ public IAsyncOperation<CortanaPermissionsChangeResult> CortanaPermissionsManager
 # Windows.Services.Cortana.CortanaPermissionsManager.GrantPermissionsAsync
 
 ## -description
+
 Asynchronously grants the specified set of Cortana permissions.
 
 ## -parameters
 
 ### -param permissions
+
 The collection of [permissions](cortanapermission.md) to grant.
 
 ## -returns
+
 The result of the permission operation.
 
+## -capabilities
+
+cortanaPermissions
+
 ## -remarks
+
 The [CortanaPermissionManager](cortanapermissionsmanager.md) class requires the following be added to the Package.appmanifest:
 
-- `<iot:Capability Name="systemManagement"/>`
-- "iot" to the list of **IgnorableNamespaces**
+- To \<Package\>
+  - `xmlns:rescap="http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabilities"`
+  - `IgnorableNamespaces="rescap"`
+- Under \<Capabilities\>
+  - `<rescap:capability name="cortanaPermissions"/>`
 
 ## -see-also
+
 [CortanaPermission](cortanapermission.md)
 
 ## -examples
-

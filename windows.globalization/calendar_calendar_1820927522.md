@@ -14,7 +14,7 @@ Creates a [Calendar](calendar.md) object that is initialized with a language lis
 
 ## -parameters
 ### -param languages
-The list of language identifiers, in priority order, representing the choice of languages. These are used for resolving patterns to strings. See Remarks.
+The list of language identifiers, in priority order, representing the choice of languages. These are used for resolving patterns to strings. See Remarks for [Calendar](calendar.md).
 
 ### -param calendar
 The calendar identifier to use.
@@ -27,4 +27,4 @@ The clock identifier to use.
 ## -examples
 
 ## -see-also
-[Unicode Key/Type Definitions](http://go.microsoft.com/fwlink/p/?LinkId=308919)
+[Unicode Key/Type Definitions](https://go.microsoft.com/fwlink/p/?LinkId=308919)

@@ -14,11 +14,11 @@ public Windows.Foundation.Uri AuthenticationUrl { get; }
 Gets the HTTPS URL specified in the Wireless Internet Service Provider roaming (WISPr) redirect message.
 
 > [!NOTE]
-> This functionality is only available to mobile operator apps and Windows Store apps given privileged access by mobile network operators.
+> This functionality is only available to mobile operator apps and UWP apps given privileged access by mobile network operators.
 
 
 
-> If you want to use this API and publish your app to the Store, you will need special approval. For more information, see the **Special and restricted capabilities** section under [App capability declarations](https://docs.microsoft.com/en-us/windows/uwp/packaging/app-capability-declarations). 
+> If you want to use this API and publish your app to the Store, you will need special approval. For more information, see the **Special and restricted capabilities** section under [App capability declarations](https://docs.microsoft.com/windows/uwp/packaging/app-capability-declarations). 
 
 Applications must determine whether to trust this URL for providing credentials.
 
@@ -31,3 +31,6 @@ Applications should not assume they are only invoked for authentication attempts
 ## -examples
 
 ## -see-also
+
+## -capabilities
+cellularDeviceIdentity, cellularDeviceControl

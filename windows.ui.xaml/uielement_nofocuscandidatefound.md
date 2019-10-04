@@ -10,6 +10,7 @@ public event TypedEventHandler NoFocusCandidateFound<UIElement, NoFocusCandidate
 # Windows.UI.Xaml.UIElement.NoFocusCandidateFound
 
 ## -description
+
 Occurs when a user attempts to move focus (via tab or directional arrows), but focus doesn't move because no focus candidate is found in the direction of movement.
 
 ## -xaml-syntax
@@ -20,7 +21,10 @@ Occurs when a user attempts to move focus (via tab or directional arrows), but f
 
 ## -remarks
 
+NoFocusCandidateFound is a routed event. For more info on the routed event concept, see [Events and routed events overview](https://docs.microsoft.com/windows/uwp/xaml-platform/events-and-routed-events-overview).
+
 ## -see-also
 
-## -examples
+[NoFocusCandidateFoundEventArgs](../windows.ui.xaml.input/nofocuscandidatefoundeventargs.md)
 
+## -examples

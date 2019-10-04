@@ -18,5 +18,5 @@ Represents an item with the TargetedContentCollection.
 ## -examples
 
 ## -capabilities
+secondaryAuthenticationFactor
 targetedContent
-

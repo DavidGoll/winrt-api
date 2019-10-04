@@ -28,6 +28,13 @@ The **MediaTimelineController** is running.
 
 ## -remarks
 
+### Version history
+
+| Windows version | SDK version | Value added |
+| -- | -- | -- |
+| 1703 | 15063 | Error |
+| 1703 | 15063 | Stalled |
+
 ## -examples
 
 ## -see-also

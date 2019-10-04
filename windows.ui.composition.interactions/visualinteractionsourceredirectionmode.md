@@ -20,8 +20,22 @@ Redirection is off, all input goes to the UI thread.
 Pointer input goes to the UI thread, Precision Touchpad input goes to the compositor.
 
 
+### -field CapableTouchpadAndPointerWheel:3
+
+
+### -field PointerWheelOnly:2
+
+
 ## -remarks
+
+### Version history
+
+| Windows version | SDK version | Value added |
+| -- | -- | -- |
+| 1803 | 17134 | CapableTouchpadAndPointerWheel |
+| 1803 | 17134 | PointerWheelOnly |
 
 ## -examples
 
 ## -see-also
+

@@ -23,7 +23,16 @@ When your app creates a file in the Downloads folder, other apps can't interfere
 
 Capabilities are not needed to create or access files in the Downloads folder. Learn more about capabilities in [App capability declarations](https://docs.microsoft.com/windows/uwp/packaging/app-capability-declarations).
 
-To learn more about what locations your app can access, see [File access permissions](http://msdn.microsoft.com/library/3a404cc0-a997-45c8-b2e8-44745539759d).
+To learn more about what locations your app can access, see [File access permissions](https://docs.microsoft.com/windows/uwp/files/file-access-permissions).
+
+### Version history
+
+| Windows version | SDK version | Value added |
+| -- | -- | -- |
+| 1511 | 10586 | CreateFileForUserAsync(User,String) |
+| 1511 | 10586 | CreateFileForUserAsync(User,String,CreationCollisionOption) |
+| 1511 | 10586 | CreateFolderForUserAsync(User,String) |
+| 1511 | 10586 | CreateFolderForUserAsync(User,String,CreationCollisionOption) |
 
 ## -examples
 You can create an empty file in the Downloads folder like this:
@@ -41,6 +50,6 @@ StorageFile file = await Windows.Storage.DownloadsFolder.CreateFileAsync("sample
 // Process file
 ```
 
-After [createFileAsync](downloadsfolder_createfileasync.md) completes, `file` gets the new file as a [StorageFile](storagefile.md).
+After [createFileAsync](downloadsfolder_createfileasync_1058061470.md) completes, `file` gets the new file as a [StorageFile](storagefile.md).
 
 ## -see-also

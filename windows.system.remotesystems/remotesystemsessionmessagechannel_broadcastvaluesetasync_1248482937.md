@@ -10,7 +10,7 @@ public IAsyncOperation<bool> RemoteSystemSessionMessageChannel.BroadcastValueSet
 # Windows.System.RemoteSystems.RemoteSystemSessionMessageChannel.BroadcastValueSetAsync
 
 ## -description
-Sends a message to all participants in this remote session messaging channel.
+Sends a message to all other participants in this remote session messaging channel.
 
 ## -parameters
 
@@ -26,3 +26,6 @@ An asynchronous operation containing a boolean value: **true** if the send opera
 
 ## -examples
 
+
+## -capabilities
+remoteSystem

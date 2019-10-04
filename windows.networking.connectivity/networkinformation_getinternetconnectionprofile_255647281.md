@@ -17,52 +17,64 @@ Gets the connection profile associated with the internet connection currently us
 The profile for the connection currently used to connect the machine to the Internet, or **null** if there is no connection profile with a suitable connection.
 
 ## -remarks
-To be notified of changes in connectivity, register a handler with the [NetworkStatusChanged](networkinformation_networkstatuschanged.md) event. When a notification is received of a network status change, call the [GetInternetConnectionProfile](networkinformation_getinternetconnectionprofile.md) method to get the current connection profile which can then be stored for later use when needed.
+To be notified of changes in connectivity, register a handler with the [NetworkStatusChanged](networkinformation_networkstatuschanged.md) event. When a notification is received of a network status change, call the GetInternetConnectionProfile method to get the current connection profile which can then be stored for later use when needed.
 
-The following example demonstrates how to retrieve a [ConnectionProfile](connectionprofile.md). The function calls [getInternetConnectionProfile](networkinformation_getinternetconnectionprofile.md) to retrieve the [ConnectionProfile](connectionprofile.md) representing the connection currently used for Internet connectivity. Alternatively, your app can call [getConnectionProfiles](networkinformation_getconnectionprofiles.md) to retrieve all available connections on a device.
+The following example demonstrates how to retrieve a [ConnectionProfile](connectionprofile.md). The function calls getInternetConnectionProfile to retrieve the [ConnectionProfile](connectionprofile.md) representing the connection currently used for Internet connectivity. Alternatively, your app can call [getConnectionProfiles](networkinformation_getconnectionprofiles_582657984.md) to retrieve all available connections on a device.
 
+**Note** For the implementation of the GetConnectionProfileInfo method in the code below, and for additional examples of how [NetworkInformation](networkinformation.md) class methods are implemented to retrieve connection profiles, see [Quickstart: Retrieving network connection information](https://docs.microsoft.com/previous-versions/windows/apps/hh452990(v=win.10)).
 
+```csharp
+using Windows.Networking.Connectivity;
 
-```javascript
+// Retrieve the ConnectionProfile.
+ConnectionProfile internetConnectionProfile = NetworkInformation.GetInternetConnectionProfile();
 
-var networkInfo = Windows.Networking.Connectivity.NetworkInformation;
+// Pass the returned object to a function that accesses the connection data.
+string connectionProfileInfo = GetConnectionProfileInfo(internetConnectionProfile);
+```
 
-//Retrieve the ConnectionProfile
-var internetConnectionProfile = networkInfo.getInternetConnectionProfile();
+```cppwinrt
+#include <winrt/Windows.Networking.Connectivity.h>
+using namespace winrt;
 
-//Pass the returned object to a function that accesses the connection data  
-var connectionProfileInfo = getConnectionProfileInfo(internetConnectionProfile);
+std::wstring GetConnectionProfileInfo(Windows::Networking::Connectivity::ConnectionProfile const& connectionProfile)
+{
+    ...
+}
 
+int main()
+{
+    winrt::init_apartment();
+
+    // Retrieve the ConnectionProfile.
+    auto internetConnectionProfile{ Windows::Networking::Connectivity::NetworkInformation::GetInternetConnectionProfile() };
+
+    // Pass the returned object to a function that accesses the connection data.
+    std::wstring strConnectionProfileInfo{ GetConnectionProfileInfo(internetConnectionProfile) };
+}
 ```
 
 ```cpp
-
 using namespace Windows::Networking::Connectivity;
 
-//Retrieve the ConnectionProfile
-ConnectionProfile^ InternetConnectionProfile = NetworkInformation::GetInternetConnectionProfile();
+// Retrieve the ConnectionProfile.
+ConnectionProfile^ internetConnectionProfile = NetworkInformation::GetInternetConnectionProfile();
 
-//Pass the returned object to a function that accesses the connection data        
-String^ strConnectionProfileInfo = GetConnectionProfileInfo(InternetConnectionProfile);
-
+// Pass the returned object to a function that accesses the connection data.
+String^ strConnectionProfileInfo = GetConnectionProfileInfo(internetConnectionProfile);
 ```
 
-```csharp
+```javascript
+var networkInfo = Windows.Networking.Connectivity.NetworkInformation;
 
-using Windows.Networking.Connectivity;
+// Retrieve the ConnectionProfile.
+var internetConnectionProfile = networkInfo.getInternetConnectionProfile();
 
-//Retrieve the ConnectionProfile
-string connectionProfileInfo = string.Empty;
-ConnectionProfile InternetConnectionProfile = NetworkInformation.GetInternetConnectionProfile();
-
-//Pass the returned object to a function that accesses the connection data  
-connectionProfileInfo = GetConnectionProfileInfo(InternetConnectionProfile);
-
+// Pass the returned object to a function that accesses the connection data.
+var connectionProfileInfo = getConnectionProfileInfo(internetConnectionProfile);
 ```
 
 If more than one connection profile is currently connecting the machine to the internet, the preferred profile is returned by this method. The preferred profile represents the connection that is the most likely to be used when sending and receiving traffic to and from the internet.
-
-For additional examples of how [NetworkInformation](networkinformation.md) class methods are implemented to retrieve connection profiles, see [Quickstart: Retrieving network connection information](http://msdn.microsoft.com/library/ef383500-f2a9-4b93-8f6b-1f87560305d8).
 
 ## -examples
 

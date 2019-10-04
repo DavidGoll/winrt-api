@@ -13,9 +13,9 @@ public class AdvertisingManagerForUser : Windows.System.UserProfile.IAdvertising
 Associates a user with an advertising ID.
 
 ## -remarks
-An instance of this class is returned by the [AdvertisingManager.GetForUser](advertisingmanager_getforuser.md) method.
+An instance of this class is returned by the [AdvertisingManager.GetForUser](advertisingmanager_getforuser_2058550280.md) method.
 
 ## -examples
 
 ## -see-also
-[Microsoft Advertising SDK](http://aka.ms/ads-sdk-uwp), [Windows Store policies for advertising conduct and content](https://msdn.microsoft.com/en-us/library/windows/apps/dn764944.aspx#pol_10_10)
+[Microsoft Advertising SDK](https://aka.ms/ads-sdk-uwp), [Microsoft Store policies for advertising conduct and content](https://docs.microsoft.com/legal/windows/agreements/store-policies)

@@ -10,7 +10,7 @@ public enum Windows.ApplicationModel.AppService.AppServiceResponseStatus : int
 # AppServiceResponseStatus
 
 ## -description
-Describes the status when an app tries to send a message to an app service by calling the [AppServiceConnection.SendMessageAsync](appserviceconnection_sendmessageasync.md) method. App service providers enable app-to-app communication by providing services that other Universal Windows app can consume.
+Describes the status when an app tries to send a message to an app service by calling the [AppServiceConnection.SendMessageAsync](appserviceconnection_sendmessageasync_1777128850.md) method. App service providers enable app-to-app communication by providing services that other Universal Windows app can consume.
 
 ## -enum-fields
 ### -field Success:0
@@ -33,10 +33,15 @@ The app service failed to process the message because it is too large.
 
 
 ## -remarks
-> [!NOTE]
-> **RemoteSystemUnavailable** and **MessageSizeTooLarge** were introduced in Windows 10, version 1607
+
+### Version history
+
+| Windows version | SDK version | Value added |
+| -- | -- | -- |
+| 1607 | 14393 | MessageSizeTooLarge |
+| 1607 | 14393 | RemoteSystemUnavailable |
 
 ## -examples
 
 ## -see-also
-[AppServiceConnection.SendMessageAsync](appserviceconnection_sendmessageasync.md), [AppServiceResponse.Status](appserviceresponse_status.md)
+[AppServiceConnection.SendMessageAsync](appserviceconnection_sendmessageasync_1777128850.md), [AppServiceResponse.Status](appserviceresponse_status.md)

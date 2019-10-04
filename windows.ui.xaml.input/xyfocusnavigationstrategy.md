@@ -10,28 +10,28 @@ public enum XYFocusNavigationStrategy : int
 # Windows.UI.Xaml.Input.XYFocusNavigationStrategy
 
 ## -description
-Specifies the disambiguation strategy used for navigating between multiple candidate targets. 
+Specifies the disambiguation strategy used for navigating between multiple candidate targets using [XYFocusDownNavigationStrategy](../windows.ui.xaml/uielement_xyfocusdownnavigationstrategy.md), [XYFocusLeftNavigationStrategy](../windows.ui.xaml/uielement_xyfocusleftnavigationstrategy.md), [XYFocusRightNavigationStrategy](../windows.ui.xaml/uielement_xyfocusrightnavigationstrategy.md), and [XYFocusUpNavigationStrategy](../windows.ui.xaml/uielement_xyfocusupnavigationstrategy.md). 
+
+> [!NOTE]
+> Other factors, such as the previously focused element or proximity to the axis of the navigation direction, can influence the navigation end result.
 
 ## -enum-fields
 ### -field Auto:0
 Indicates that navigation strategy is inherited from the element's ancestors. If all ancestors have a value of **Auto**, the fallback strategy is **Projection**. 
 
 ### -field Projection:1
-Indicates that focus moves to the first element encountered when projecting the edge of the currently focused element in the  direction of navigation.
+Indicates that focus moves to the first element encountered when projecting the edge of the currently focused element in the direction of navigation.
 
-> [!NOTE]
-> Other factors, such as the previously focused element and proximity to the axis of the navigation direction, can influence the result.
-
-![projection](images/projection.png)
+<img alt="Focus navigation - projection" src="images/projection.png" />
 
 *Focus moves from A to D on down navigation based on projection of the bottom edge of A*
 
 ### -field NavigationDirectionDistance:2
 Indicates that focus moves to the element closest to the axis of the navigation direction.
 
-The edge of the bounding rect corresponding to the navigation direction is extended and projected to identify candidate targets. The first element encountered is identified as the target. In the case of multiple candidates, the closest element is identified as the target. If there are still multiple candidates, the topmost/leftmost element is identified as the candidate.
+The edge of the bounding rect corresponding to the navigation direction is *extended* and *projected* to identify candidate targets. The first element encountered is identified as the target. In the case of multiple candidates, the closest element is identified as the target. If there are still multiple candidates, the topmost/leftmost element is identified as the candidate.
 
-![navigation direction distance](images/navigation-direction-distance.png)
+<img alt="Focus navigation - distance" src="images/navigation-direction-distance.png" />
 
 *Focus moves from A to C and then from C to B on down navigation*
 
@@ -48,12 +48,12 @@ Here we show how focus moves from A to B based on rectilinear distance.
 -   Distance (A, C, Down) = 0 + 30 = 30
 -   Distance (A, D, Down) 30 + 0 = 30
 
-![Rectilinear Distance](images/rectilinear-distance.png)
+<img alt="Focus navigation - rectilinear distance" src="images/rectilinear-distance.png" />
 
 *Focus moves from A to B based on rectilinear distance*
 
 ## -remarks
-XY navigation is used to navigate a user interface (UI) with a gamepad, remote control, or keyboard directional arrows. For more info, see [Gamepad and remote control interactions](https://msdn.microsoft.com/windows/uwp/input-and-devices/gamepad-and-remote-interactions)
+XY navigation is used to navigate a user interface (UI) with a gamepad, remote control, or keyboard directional arrows. For more info, see [Gamepad and remote control interactions](https://docs.microsoft.com/windows/uwp/input-and-devices/gamepad-and-remote-interactions)
 
 ## -examples
 
@@ -63,8 +63,8 @@ XY navigation is used to navigate a user interface (UI) with a gamepad, remote c
 - [XYFocusNavigationStrategyOverride](xyfocusnavigationstrategyoverride.md)
 
 ### Conceptual
-- [Managing focus navigation](https://docs.microsoft.com/windows/uwp/input-and-devices/managing-focus-navigation)
-- [Desiging for Xbox - XY focus navigation and interaction](https://msdn.microsoft.com/windows/uwp/input-and-devices/designing-for-tv#xy-focus-navigation-and-interaction)
+- [Programmatic focus navigation](https://docs.microsoft.com/windows/uwp/input-and-devices/focus-navigation-programmatic)
+- [Desiging for Xbox - XY focus navigation and interaction](https://docs.microsoft.com/windows/uwp/input-and-devices/designing-for-tv)
 
 
 

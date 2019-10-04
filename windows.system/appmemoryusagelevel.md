@@ -28,6 +28,12 @@ App memory usage is over the limit.
 
 ## -remarks
 
+### Version history
+
+| Windows version | SDK version | Value added |
+| -- | -- | -- |
+| 1607 | 14393 | OverLimit |
+
 ## -examples
 
 ## -see-also

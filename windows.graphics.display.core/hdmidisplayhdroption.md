@@ -11,22 +11,29 @@ public enum HdmiDisplayHdrOption : int
 
 ## -description
 
-Describes the options used for mastering high dynamic range (HDR) content.
+Defines constants that specify the high dynamic range (HDR) options of a connected device such as a TV or a monitor.
 
 ## -enum-fields
-### -field None:0
 
-The HDR10 Media Profile is disabled. No HDMI HDR packets are sent to the display.
+### -field None:0
+Specifies no option.
 
 ### -field EotfSdr:1
-
-Use the standard dynamic range (SDR) electro-optical transfer function (EOTF).
+Specifies a standard dynamic range (SDR) electro-optical transfer function (EOTF).
 
 ### -field Eotf2084:2
+Specifies an SMPTE ST 2084 electro-optical transfer function (EOTF).
 
-Use the SMPTE (Society of Motion Picture and Television Engineers) ST 2084 electo-optical transfer function (EOTF).
+### -field DolbyVisionLowLatency:3
+Specifies the low-latency profile for Dolby Vision.
 
 ## -remarks
+
+### Version history
+
+| Windows version | SDK version | Value added |
+| -- | -- | -- |
+| 1809 | 17763 | DolbyVisionLowLatency |
 
 ## -see-also
 

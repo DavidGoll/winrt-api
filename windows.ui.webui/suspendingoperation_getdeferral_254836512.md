@@ -16,7 +16,7 @@ Requests that the app suspension operation be delayed.
 The suspension deferral.
 
 ## -remarks
-App suspension is delayed until the app calls the [SuspendingDeferral.complete](suspendingdeferral_complete.md) method or the deadline for suspension has passed.
+App suspension is delayed until the app calls the [SuspendingDeferral.complete](suspendingdeferral_complete_1807836922.md) method or the deadline for suspension has passed.
 
 Use the deferral to complete asynchronous operations, such as saving data to a file, before the system suspends your app.
 
@@ -25,4 +25,4 @@ Note that requesting a deferral does not give your app more time to complete sus
 ## -examples
 
 ## -see-also
-[App lifecycle](http://msdn.microsoft.com/library/6c469e77-f1e3-4859-a27b-c326f9616d10), [App activated, resume, and suspend using the WRL sample](http://go.microsoft.com/fwlink/p/?linkid=226722)
+[App lifecycle](https://docs.microsoft.com/windows/uwp/launch-resume/app-lifecycle), [App activated, resume, and suspend using the WRL sample](https://go.microsoft.com/fwlink/p/?linkid=226722)

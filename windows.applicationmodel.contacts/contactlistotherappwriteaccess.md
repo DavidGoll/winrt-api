@@ -24,6 +24,15 @@ Other apps can only write contacts for this app.
 
 ## -remarks
 
+### Version history
+
+| Windows version | SDK version | Value added |
+| -- | -- | -- |
+| 1709 | 16299 | Limited |
+
 ## -examples
 
 ## -see-also
+
+## -capabilities
+contactsSystem

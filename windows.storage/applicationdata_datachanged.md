@@ -10,27 +10,16 @@ public event Windows.Foundation.TypedEventHandler DataChanged<Windows.Storage.Ap
 # Windows.Storage.ApplicationData.DataChanged
 
 ## -description
+
 Occurs when roaming application data is synchronized.
 
 ## -remarks
 
+The event handler receives an [ApplicationData](applicationdata.md) object that provides access to the changed roaming data containers. For more information, see [Roaming data](https://docs.microsoft.com/windows/uwp/design/app-settings/store-and-retrieve-app-data#roaming-data).
+
 ## -examples
-This example registers for the [DataChanged | datachanged](applicationdata_datachanged.md) event.
 
-```javascript
-
-var applicationData = Windows.Storage.ApplicationData.current;
-
-function initialize() 
-{
-    applicationData.addEventListener("datachanged", datachangeHandler);
-}
-
-function dataChangeHandler(eventArgs)
-{
-    // TODO: Refresh your data
-}
-```
+This example registers for the DataChanged event.
 
 ```csharp
 void InitHandlers()
@@ -45,14 +34,16 @@ void DataChangeHandler(Windows.Storage.ApplicationData appData, object o)
 }
 ```
 
-```vb
-Private Sub InitHandlers()
-    AddHandler Windows.Storage.ApplicationData.Current.DataChanged, AddressOf DataChangeHandler
-End Sub
+```cppwinrt
+void MainPage::InitHandlers()
+{
+    Windows::Storage::ApplicationData::Current().DataChanged({ this, &MainPage::DataChangeHandler });
+}
 
-Private Sub DataChangeHandler(ByVal appData As Windows.Storage.ApplicationData, ByVal o As Object)
-    ' TODO: Refresh your data
-End Sub
+void MainPage::DataChangeHandler(Windows::Storage::ApplicationData const& /* appData */, Windows::Foundation::IInspectable const& /* object */)
+{
+    // TODO: Refresh your data.
+}
 ```
 
 ```cpp
@@ -69,7 +60,29 @@ void MainPage::DataChangeHandler(Windows::Storage::ApplicationData^ appData, Obj
 }
 ```
 
+```javascript
+var applicationData = Windows.Storage.ApplicationData.current;
 
+function initialize() 
+{
+    applicationData.addEventListener("datachanged", datachangeHandler);
+}
+
+function dataChangeHandler(eventArgs)
+{
+    // TODO: Refresh your data
+}
+```
+
+```vb
+Private Sub InitHandlers()
+    AddHandler Windows.Storage.ApplicationData.Current.DataChanged, AddressOf DataChangeHandler
+End Sub
+
+Private Sub DataChangeHandler(ByVal appData As Windows.Storage.ApplicationData, ByVal o As Object)
+    ' TODO: Refresh your data
+End Sub
+```
 
 ## -see-also
-[Quickstart: Roaming application data (JavaScript)](http://msdn.microsoft.com/library/60f40214-c201-4afe-a2f5-0ef3a7de0076), [Store and retrieve settings and other app data](http://msdn.microsoft.com/library/41676a02-325a-455e-8565-c9ec0bc3a8fe), [Store and retrieve settings and other app data](http://msdn.microsoft.com/library/41676a02-325a-455e-8565-c9ec0bc3a8fe)
+[Roaming data](https://docs.microsoft.com/windows/uwp/design/app-settings/store-and-retrieve-app-data#roaming-data),[Quickstart: Roaming application data (JavaScript)](https://docs.microsoft.com/previous-versions/windows/apps/hh465123(v=win.10))

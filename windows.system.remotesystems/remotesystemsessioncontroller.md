@@ -15,6 +15,9 @@ Handles the creation and management of a new remote session for other devices to
 ## -remarks
 Every remote session has one participant that is the session's controller. Only the controller can specify options for the session, accept join requests from would-be participants, and remove participants from the session.
 
+> [!IMPORTANT]
+> You must confirm access to the remote system platform with a call to **[RemoteSystem.RequestAccessAsync](remotesystem_requestaccessasync_380675631.md)** before you instantiate this class.
+
 ## -see-also
 
 ## -examples
@@ -43,9 +46,9 @@ public async void StartNewSharedExperience() {
     RemoteSystemSessionCreationResult createResult = await manager.CreateSessionAsync();
     
     // handle the creation result
-    if (createResult.Status == RemoteSystemSessionCreateStatus.Success) {
+    if (createResult.Status == RemoteSystemSessionCreationStatus.Success) {
         // creation was successful
-        RemoteSystemSession currentSession = createResult.RemoteSystemSession;
+        RemoteSystemSession currentSession = createResult.Session;
         
         // optionally subscribe to the disconnection event
         currentSession.Disconnected += async (sender, args) => {
@@ -55,10 +58,13 @@ public async void StartNewSharedExperience() {
     
         // Use session ...
     
-    } else if (createResult.Status == RemoteSystemSessionCreateStatus.SessionLimitsExceeded) {
+    } else if (createResult.Status == RemoteSystemSessionCreationStatus.SessionLimitsExceeded) {
         // creation failed. Optionally update UI to indicate that there are too many sessions in progress
     } else {
         // creation failed for an unknown reason. Optionally update UI
     }
 }
 ```
+
+## -capabilities
+remoteSystem

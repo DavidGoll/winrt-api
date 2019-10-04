@@ -66,14 +66,14 @@ Specifies the scale of a display as 500 percent.
 
 
 ## -remarks
-For more info on scaling to pixel density, see [UX guidelines for layout and scaling](http://msdn.microsoft.com/library/c388f639-6f35-4d52-bffe-53ff3f537d4b).
+For more info on scaling to pixel density, see [UX guidelines for layout and scaling](https://developer.microsoft.com/windows/apps/design).
 
-The [Scaling according to DPI sample](http://go.microsoft.com/fwlink/p/?linkid=231577) shows how to use the [ResolutionScale](resolutionscale.md) enumeration.
+The [Scaling according to DPI sample](https://go.microsoft.com/fwlink/p/?linkid=231577) shows how to use the ResolutionScale enumeration.
 
 
-For Windows Store app and Windows Phone apps, we recommend these scale factors:
+For UWP apps and Windows Phone apps, we recommend these scale factors:
 
-+ Windows Store app (100/140/180)
++ UWP app (100/140/180)
 + Windows Phone apps for Windows Phone 8.1 and later (100/140/240)
 + Windows Phone apps for Windows Phone 8 (100/150/160)
 

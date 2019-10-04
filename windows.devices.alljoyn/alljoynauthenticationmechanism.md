@@ -37,6 +37,12 @@ ECDHE_SPEKE key exchange.
 
 ## -remarks
 
+### Version history
+
+| Windows version | SDK version | Value added |
+| -- | -- | -- |
+| 1607 | 14393 | EcdheSpeke |
+
 ## -examples
 
 ## -see-also
@@ -44,5 +50,3 @@ ECDHE_SPEKE key exchange.
 
 ## -capabilities
 allJoyn
-
-

@@ -10,7 +10,7 @@ public Windows.Foundation.IAsyncOperation<Windows.Services.Store.StorePurchaseRe
 # Windows.Services.Store.StoreProduct.RequestPurchaseAsync
 
 ## -description
-Requests the purchase of the default SKU and availability for the product and displays the UI that is used to complete the transaction via the Windows Store. This method provides the option to specify additional details for a specific offer within a large catalog of products that are represented by a single listing in the Windows Store, including the product name to display to the user during the purchase.
+Requests the purchase of the default SKU and availability for the product and displays the UI that is used to complete the transaction via the Microsoft Store. This method provides the option to specify additional details for a specific offer within a large catalog of products that are represented by a single listing in the Microsoft Store, including the product name to display to the user during the purchase.
 
 > [!IMPORTANT]
 > This method must be called on the UI thread.
@@ -30,4 +30,4 @@ If the **ErrorCode** property of the exception has the value 0x80070578 (ERROR_I
 ## -examples
 
 ## -see-also
-[RequestPurchaseAsync](storeproduct_requestpurchaseasync_1696674465.md), [Enable in-app purchases of apps and add-ons](https://msdn.microsoft.com/windows/uwp/monetize/enable-in-app-purchases-of-apps-and-add-ons)
+[RequestPurchaseAsync](storeproduct_requestpurchaseasync_1696674465.md), [Enable in-app purchases of apps and add-ons](https://docs.microsoft.com/windows/uwp/monetize/enable-in-app-purchases-of-apps-and-add-ons)

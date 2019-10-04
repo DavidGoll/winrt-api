@@ -26,12 +26,12 @@ The altitude reference system of the geographic point. A value of **Unspecified*
 When this method returns, contains the corresponding geographic location.
 
 ## -remarks
-This method provides an instance of a [Geopoint](../windows.devices.geolocation/geopoint.md). That [Geopoint](../windows.devices.geolocation/geopoint.md) contains a [BasicGeoPosition](../windows.devices.geolocation/geoposition.md). object.  The *desiredReferenceSystem* parameter sets the [Altitude](https://docs.microsoft.com/uwp/api/windows.devices.geolocation.basicgeoposition#Windows_Devices_Geolocation_BasicGeoposition_Altitude) field of that object.  
+This method provides an instance of a [Geopoint](../windows.devices.geolocation/geopoint.md). That [Geopoint](../windows.devices.geolocation/geopoint.md) contains a [BasicGeoPosition](../windows.devices.geolocation/geoposition.md). object.  The *desiredReferenceSystem* parameter sets the [Altitude](https://docs.microsoft.com/uwp/api/windows.devices.geolocation.basicgeoposition.Altitude) field of that object.  
 
 This method will throw an exception if the point is invalid.
 > [!NOTE]
 > An [AltitudeReferenceSystem](../windows.devices.geolocation/altitudereferencesystem.md) of **Ellipsoid** might not be supported.
 
 ## -see-also
-[Display maps with 2D, 3D, and Streetside views](http://msdn.microsoft.com/library/3839e00b-2c1e-4627-a45f-6dda98d7077f).
+[Display maps with 2D, 3D, and Streetside views](https://docs.microsoft.com/windows/uwp/maps-and-location/display-maps).
 ## -examples

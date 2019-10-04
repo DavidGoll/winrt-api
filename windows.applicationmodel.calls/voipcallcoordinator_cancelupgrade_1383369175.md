@@ -22,6 +22,5 @@ The GUID for the VoIP call.
 
 ## -see-also
 
-
 ## -capabilities
-voipCall
+phoneCallHistory, phoneCallHistorySystem, voipCall

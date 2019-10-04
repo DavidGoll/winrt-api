@@ -23,9 +23,23 @@ The batch contains animations.
 The batch contains effects.
 
 
+### -field AllAnimations:5
+
+
+### -field InfiniteAnimation:4
+
+
 ## -remarks
+
+### Version history
+
+| Windows version | SDK version | Value added |
+| -- | -- | -- |
+| 1809 | 17763 | AllAnimations |
+| 1809 | 17763 | InfiniteAnimation |
 
 ## -examples
 
 ## -see-also
-[Composition Animations Overview](http://go.microsoft.com/fwlink/p/?LinkID=692060)
+[Composition Animations Overview](https://go.microsoft.com/fwlink/p/?LinkID=692060)
+

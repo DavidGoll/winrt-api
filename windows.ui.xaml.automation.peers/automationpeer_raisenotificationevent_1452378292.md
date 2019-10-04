@@ -23,7 +23,7 @@ Specifies the order in which to process the notification.
 A display string describing the event.
 
 ### -param activityId
-A GUID that identifies the activity.
+A unique non-localized string to identify an action or group of actions. Use this to pass additional information to the event handler.
 
 ## -remarks
 

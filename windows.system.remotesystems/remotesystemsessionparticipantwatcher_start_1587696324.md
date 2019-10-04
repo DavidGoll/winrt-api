@@ -10,7 +10,7 @@ public void RemoteSystemSessionParticipantWatcher.Start()
 # Windows.System.RemoteSystems.RemoteSystemSessionParticipantWatcher.Start
 
 ## -description
-Starts watching for participants in the remote session. The discovery process runs until the **Stop** method is called. A [RemoteSystemSessionParticipantWatcher](RemoteSystemSessionParticipantWatcher.md) object can have its **Start** method called again at a later time.
+Starts watching for participants in the remote session. The discovery process runs until the [Stop](remotesystemsessionparticipantwatcher_stop_1201535524.md) method is called. A [RemoteSystemSessionParticipantWatcher](RemoteSystemSessionParticipantWatcher.md) object can have its **Start** method called again at a later time.
 
 ## -remarks
 
@@ -18,3 +18,6 @@ Starts watching for participants in the remote session. The discovery process ru
 
 ## -examples
 
+
+## -capabilities
+remoteSystem

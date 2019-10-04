@@ -10,14 +10,12 @@ public class SyndicationClient : Windows.Web.Syndication.ISyndicationClient
 # Windows.Web.Syndication.SyndicationClient
 
 ## -description
+
 Implements the [ISyndicationClient](isyndicationclient.md) interface which retrieves feeds from a URI asynchronously.
 
 ## -remarks
-The following code demonstrates how to retrieve a feed using [RetrieveFeedAsync](syndicationclient_retrievefeedasync.md).
 
-
-
-
+The following code demonstrates how to retrieve a feed using [RetrieveFeedAsync](syndicationclient_retrievefeedasync_2072117461.md).
 
 ```javascript
 function GetFeed(feedUri) {
@@ -35,18 +33,20 @@ function GetFeed(feedUri) {
 using Windows.Foundation;
 using Windows.Web.Syndication;
 
-async void GetFeed(feedUri){
-      Uri uri = new Uri(feedUri);
-      SyndicationClient client = new SyndicationClient();
-      client.BypassCacheOnRetrieve = true;
+async Task GetFeedAsync(string feedUri){
+      var uri = new Uri(feedUri);
+      var client = new SyndicationClient() {
+          BypassCacheOnRetrieve = true
+      };
       currentFeed = await client.RetrieveFeedAsync(uri);
 }
 
 ```
 
-For additional examples that demonstrate how this class is used to retrieve syndicated content from the web, see [Quickstart: Accessing a web feed](http://msdn.microsoft.com/library/bde79bfb-f566-4dbe-b861-f849ab8bc574).
+For additional examples that demonstrate how this class is used to retrieve syndicated content from the web, see [Quickstart: Accessing a web feed](https://docs.microsoft.com/previous-versions/windows/apps/hh700374(v=win.10)).
 
 ## -examples
 
 ## -see-also
-[Quickstart: Accessing a web feed](http://msdn.microsoft.com/library/bde79bfb-f566-4dbe-b861-f849ab8bc574), [Syndication sample](http://go.microsoft.com/fwlink/p/?linkid=245062), [Syndication sample (Windows 10)](http://go.microsoft.com/fwlink/p/?LinkId=620610), [RSS reader end-to-end (JavaScript) sample (Windows 10)](http://go.microsoft.com/fwlink/p/?LinkId=620542)
+
+[Quickstart: Accessing a web feed](https://docs.microsoft.com/previous-versions/windows/apps/hh700374(v=win.10)), [Syndication sample](https://go.microsoft.com/fwlink/p/?linkid=245062), [Syndication sample (Windows 10)](https://go.microsoft.com/fwlink/p/?LinkId=620610), [RSS reader end-to-end (JavaScript) sample (Windows 10)](https://go.microsoft.com/fwlink/p/?LinkId=620542)
